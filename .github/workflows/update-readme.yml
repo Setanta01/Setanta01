@@ -1,4 +1,4 @@
-name: Generate GitHub Stats with Private Repos
+name: Update GitHub Stats
 
 on:
   schedule:
@@ -6,46 +6,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  stats:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Generate GitHub Stats
+        uses: anuraghazra/github-readme-stats@v3
         with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: |
-          git clone https://github.com/anuraghazra/github-readme-stats.git stats-generator
-          cd stats-generator
-          npm install
-
-      - name: Generate Stats and Top Langs SVG
-        run: |
-          cd stats-generator
-          node scripts/build.js \
-            --username=setanta01 \
-            --count_private=true \
-            --hide=contribs \
-            --output=../stats.svg \
-            --theme=tokyonight
-
-          node scripts/build-top-langs.js \
-            --username=setanta01 \
-            --count_private=true \
-            --theme=tokyonight \
-            --output=../stats-langs.svg
+          username: setanta01
+          count_private: true
+          hide: contribs
+          theme: tokyonight
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_1 }}
 
-      - name: Commit and push
+      - name: Commit stats SVG
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add stats.svg stats-langs.svg
-          git commit -m "Update stats + top langs" || echo "No changes to commit"
+          git add .
+          git commit -m "Update stats with private repos" || echo "No changes to commit"
           git push
