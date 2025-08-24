@@ -1,26 +1,28 @@
-name: Update README with Stats
+name: Generate GitHub Stats with Private Repos
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # Atualiza a cada 6 horas
+    - cron: "0 */6 * * *" # A cada 6h
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate GitHub Stats
-        uses: anuraghazra/github-readme-stats@master
-        env:
-          PAT_1: ${{ secrets.PAT_1 }}
+      - name: Generate Stats Card
+        run: |
+          curl -H "Authorization: token ${{ secrets.PAT_1 }}" \
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight&count_private=true" \
+            -o stats-langs.svg
 
-      - name: Commit changes
+      - name: Commit and Push
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Update README with latest stats" || echo "No changes"
+          git add stats-langs.svg
+          git commit -m "Update stats-langs.svg"
           git push
