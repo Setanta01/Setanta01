@@ -1,6 +1,7 @@
 # 👋 Olá, eu sou o Leo
 
 💻 Entusiasta em tecnologia.
+
 🚀 Busco sempre evoluir minhas habilidades e contribuir em projetos open-source.
 
 ---
@@ -25,19 +26,12 @@
 - **PHP** | **Laravel** | **CakePHP**
 - **C** | **C++** | **Lua** | **LuaJIT**
 - **JavaScript** | **HTML** | **CSS**
-- **Git** (controle de versão)
+- **Git** (controle de versão)  
+- **FTP** (FileZilla)
 
 ---
 
 ## 📬 Contato
-<p align="center">
-  <a href="https://github.com/setanta01">
-    <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-  <a href="mailto:leouthedev@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://www.linkedin.com/in/seu-linkedin">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-</p>
+**✉️ Email:**  
+```diff
+leouthedev@gmail.com
