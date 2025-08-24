@@ -2,7 +2,7 @@ name: Generate GitHub Stats with Private Repos
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # A cada 6h
+    - cron: "0 */6 * * *" # Atualiza a cada 6h
   workflow_dispatch:
 
 jobs:
@@ -19,10 +19,15 @@ jobs:
             "https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight&count_private=true" \
             -o stats-langs.svg
 
+      - name: Verify file
+        run: |
+          ls -lh stats-langs.svg
+          file stats-langs.svg || true
+
       - name: Commit and Push
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add stats-langs.svg
-          git commit -m "Update stats-langs.svg"
+          git commit -m "Update stats-langs.svg" || echo "No changes to commit"
           git push
