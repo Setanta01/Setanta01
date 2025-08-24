@@ -8,8 +8,8 @@
 
 ## 📊 GitHub Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=setanta01&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" height="160"/>
-  <img src="https://raw.githubusercontent.com/setanta01/setanta01/main/stats-langs.svg" alt="Top Langs" height="160"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=LeoUchoaVanderley&show_icons=true&theme=tokyonight" alt="GitHub Stats" height="160"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LeoUchoaVanderley&layout=compact&theme=tokyonight" alt="Top Langs" height="160"/>
 </p>
 
 ---
@@ -34,3 +34,4 @@
 ## 📬 Contato
 ```diff
 leouthedev@gmail.com
+
