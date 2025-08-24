@@ -35,4 +35,5 @@
 **✉️ Email:**  
 
 ```fix
-📨 leouthedev@gmail.com
+leouthedev@gmail.com
+
