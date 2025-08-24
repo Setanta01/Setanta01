@@ -2,7 +2,7 @@ name: Generate GitHub Stats with Private Repos
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # Atualiza a cada 6h
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -13,21 +13,39 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate Stats Card
-        run: |
-          curl -H "Authorization: token ${{ secrets.PAT_1 }}" \
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight&count_private=true" \
-            -o stats-langs.svg
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-      - name: Verify file
+      - name: Install dependencies
         run: |
-          ls -lh stats-langs.svg
-          file stats-langs.svg || true
+          git clone https://github.com/anuraghazra/github-readme-stats.git stats-generator
+          cd stats-generator
+          npm install
 
-      - name: Commit and Push
+      - name: Generate Stats and Top Langs SVG
+        run: |
+          cd stats-generator
+          node scripts/build.js \
+            --username=setanta01 \
+            --count_private=true \
+            --hide=contribs \
+            --output=../stats.svg \
+            --theme=tokyonight
+
+          node scripts/build-top-langs.js \
+            --username=setanta01 \
+            --count_private=true \
+            --theme=tokyonight \
+            --output=../stats-langs.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_1 }}
+
+      - name: Commit and push
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add stats-langs.svg
-          git commit -m "Update stats-langs.svg" || echo "No changes to commit"
+          git add stats.svg stats-langs.svg
+          git commit -m "Update stats + top langs" || echo "No changes to commit"
           git push
