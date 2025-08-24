@@ -33,5 +33,6 @@
 
 ## 📬 Contato
 **✉️ Email:**  
-```diff
-leouthedev@gmail.com
+
+```fix
+📨 leouthedev@gmail.com
