@@ -32,5 +32,6 @@
 ---
 
 ## 📬 Contato
-```fix
-### leouthedev@gmail.com
+```diff
+leouthedev@gmail.com
+
