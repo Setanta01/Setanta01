@@ -10,12 +10,12 @@
 
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api?username=setanta01&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=86400"
+    src="https://github-readme-stats.vercel.app/api?username=setanta01&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&cache_seconds=3600"
     height="160"
     alt="GitHub Stats"
   />
   <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&cache_seconds=3600"
     height="160"
     alt="Top Languages"
   />
@@ -41,4 +41,5 @@
 ## 📬 Contato
 ```diff
 leouthedev@gmail.com
+
 
