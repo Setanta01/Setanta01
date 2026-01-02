@@ -6,18 +6,6 @@
 
 
 
-## 📊 GitHub Stats
-<p align="center">
-  <img
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=setanta01&show_icons=true&theme=tokyonight&hide_border=true"
-    height="160"
-  />
-  <img
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs?username=setanta01&layout=compact&theme=tokyonight&hide_border=true"
-    height="160"
-  />
-</p>
-
 ## 🛠️ Competências
 
 ### 🌐 Servidores & Cloud
@@ -38,6 +26,7 @@
 ## 📬 Contato
 ```diff
 leouthedev@gmail.com
+
 
 
 
