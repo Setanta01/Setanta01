@@ -7,11 +7,19 @@
 
 
 ## 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=setanta01&show_icons=true&theme=tokyonight" alt="GitHub Stats" height="160"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight" alt="Top Langs" height="160"/>
-</p>
 
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=setanta01&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=86400"
+    height="160"
+    alt="GitHub Stats"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=setanta01&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400"
+    height="160"
+    alt="Top Languages"
+  />
+</p>
 
 ## 🛠️ Competências
 
@@ -33,3 +41,4 @@
 ## 📬 Contato
 ```diff
 leouthedev@gmail.com
+
