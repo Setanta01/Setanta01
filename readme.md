@@ -19,10 +19,9 @@
 - **C** | **C++** | **Lua** | **LuaJIT**
 - **JavaScript** | **HTML** | **CSS**
 - **Git** (controle de versão)  
-- **FTP** (FileZilla)
-
 ---
 
 ## 📬 Contato
 ```diff
 leouthedev@gmail.com
+
